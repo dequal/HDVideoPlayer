@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor =  [UIColor colorWithRed:39/255.0 green:50/255.0 blue:56/255.0 alpha:1/1.0];
     
     SJVideoPlayer *player = [SJVideoPlayer sharedPlayer];
     

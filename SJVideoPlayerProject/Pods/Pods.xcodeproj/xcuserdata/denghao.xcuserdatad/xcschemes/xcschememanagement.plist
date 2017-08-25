@@ -6,28 +6,43 @@
 	<dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-SJVideoPlayerProject.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SJBorderLineView.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SJSlider.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>lottie-ios.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3414D32F88F3A048A25C3338558415F3</key>
+		<key>008181E13866435A72F031B4E79DEAC7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>314700CC4C56EB3C376F8F25B11A9F82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C948F58202A34F861981DFBD7FDC851</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A5ED3C200243413E9DB943C307CF978A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D85A387B25587339EBCB86FE81A26B20</key>
+		<key>F746629FD3E2629E52081CCFA14CDC16</key>
 		<dict>
 			<key>primary</key>
 			<true/>

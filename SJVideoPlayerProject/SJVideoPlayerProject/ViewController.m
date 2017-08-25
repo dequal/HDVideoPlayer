@@ -14,10 +14,13 @@
 
 #import "VideoPlayerViewController.h"
 
-@interface ViewController ()
+#import <Lottie/Lottie.h>
+
+@interface ViewController ()<UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIButton *pushBtn;
 
+@property (nonatomic, strong) LOTAnimationView *lotAniView;
 @end
 
 @implementation ViewController
@@ -25,14 +28,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor blueColor];
     [self.view addSubview:self.pushBtn];
+    [self animaWithName:@"playing" Frame:CGRectMake(120, 350, 180, 180)];
     
     [self.pushBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.offset(0);
         make.size.mas_equalTo(CGSizeMake(100, 100));
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.view).mas_offset(200);
     }];
     
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)clickedBtn:(UIButton *)btn {
@@ -47,5 +52,30 @@
     _pushBtn.clipsToBounds = YES;
     return _pushBtn;
 }
+
+- (void)animaWithName:(NSString *)name Frame:(CGRect )frame{
+    if (!self.lotAniView) {
+        LOTAnimationView *animationView = [LOTAnimationView animationNamed:name];
+        [animationView setFrame:frame];
+//        [animationView addSubview:self.view];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickedBtn:)];
+        tap.delegate = self;
+        [animationView addGestureRecognizer:tap];
+        
+        animationView.loopAnimation = YES;
+        animationView.contentMode = UIViewContentModeScaleAspectFill;
+        animationView.animationSpeed = 0.5;
+        animationView.transform = CGAffineTransformMakeScale(0.1, 0.1);
+        [UIView animateWithDuration:3.0 delay:0.0 options:UIViewAnimationOptionRepeat|UIViewAnimationOptionAutoreverse animations:^{
+            animationView.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            [self.view addSubview:animationView];
+            [animationView play];
+        }];
+            self.lotAniView = animationView;
+    }
+
+}
+
 
 @end
