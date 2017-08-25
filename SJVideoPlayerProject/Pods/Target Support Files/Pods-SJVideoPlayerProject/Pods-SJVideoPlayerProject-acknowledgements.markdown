@@ -52,7 +52,7 @@ SOFTWARE.
 
 MIT License
 
-Copyright (c) 2017 changsanjiang
+Copyright (c) 2017 harris
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
